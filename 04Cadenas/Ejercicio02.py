@@ -1,0 +1,5 @@
+nombreC = input("Dime tu nombre completo: ")
+print("")
+print(nombreC.lower())
+print(nombreC.upper())
+print(nombreC.title())
