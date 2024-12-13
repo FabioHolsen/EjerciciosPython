@@ -68,7 +68,7 @@ if resultado[alGanadorR3] == "L":
 else:
     campeon = ganadorR2[1]
 print("")
-print(f"Campeón: {campeon[0]}")
+print(f"Campeón: {campeon}")
 
 
 
