@@ -30,4 +30,8 @@ for muroL in muro:
         valorF4 = muroL[1]
         fila4.append(valorF4)
 print(laberinto)
-print(laberinto[1][2])
+for i in laberinto:
+    largo = len(i)
+    print(type(largo))
+    for j in range(largo):
+         
