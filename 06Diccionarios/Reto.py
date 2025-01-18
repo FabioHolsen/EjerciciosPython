@@ -32,6 +32,5 @@ for muroL in muro:
 print(laberinto)
 for i in laberinto:
     largo = len(i)
-    print(type(largo))
     for j in range(largo):
-         
+        print(j)     
