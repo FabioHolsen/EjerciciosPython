@@ -82,6 +82,7 @@ while not(fin):
         print("Haz ganado!")
         print("Tu historial:")
         print(historial)
+        print(f"Resolviste el juego en {len(historial)} movimientos.")
         fin = True
     else:
         fin = True
