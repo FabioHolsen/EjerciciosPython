@@ -28,7 +28,7 @@ while not(fin):
                 for y in x:
                     print(y,end=" ")
                 print()
-            direccion = input("Escoje una dirección: arriba/abajo/derecha/izquierda: ")
+            direccion = input("Escoge una dirección: arriba/abajo/derecha/izquierda: ")
             if direccion == "arriba":
                 if ubicacion[0] == 0:
                     print("No puedes subir más!")
