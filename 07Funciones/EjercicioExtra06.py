@@ -8,10 +8,9 @@ def validarRol(rol):
     fin = False
     while not (fin):
         leer= input(rol)
-        for j in roles:
-            if j == leer:    
-                fin = True
-        if fin == False:
+        if leer in roles:    
+            fin = True
+        elif fin == False:
             print("Error.")     
     return leer
 
@@ -21,10 +20,9 @@ def validarAccion(accion):
     fin = False
     while not (fin):
         leer= input(accion)
-        for j in acciones:
-            if j == leer:    
-                fin = True
-        if fin == False:
+        if leer in acciones:    
+            fin = True
+        elif fin == False:
             print("Error.")     
     return leer
 
@@ -43,12 +41,24 @@ def acceso(nombre_usuario,rol,accion):
         mensaje1 = "Accion permitida"
     mensaje2 = f"Usuario {nombre_usuario} con el rol de {rol}"
     return mensaje1, mensaje2
-nomU= input("Dime tu nombre: ")
-print("")
-rolU = validarRol("Dime tu rol: ")
-print("")
-accionU = validarAccion("Dime la accion: ")
 
-msg1, msg2 = acceso(nomU,rolU,accionU)
-print(msg1)
-print(msg2)
+fin = False
+
+while not(fin):
+    nomU= input("Dime tu nombre: ")
+    print("")
+    rolU = validarRol("Dime tu rol: ")
+    print("")
+    accionU = validarAccion("Dime la accion: ")
+    msg1, msg2 = acceso(nomU,rolU,accionU)
+    print(msg1)
+    print(msg2)
+    continua = input("¿Desea seguir? (s/n):")
+    continua = continua.lower()
+    if continua == "s":
+        fin = False
+    elif continua == "n":
+        fin = True
+    else:
+        print("Valor incorrecto.")
+        fin = False
