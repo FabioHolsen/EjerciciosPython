@@ -43,7 +43,7 @@ def checkStock(prod):
     while not(fin):
         cant = int(input(f"Dime la cantidad de {prod["nombre"]} que quieres comprar: "))
         if  prod["stock"]>= cant:
-            compra = {"producto":prod["nombre"],"cantidad":cant}
+            compra = {"producto":prod["nombre"],"cantidad":cant, "precio":prod["precio"]}
             fin = True
         else:
             print("No hay suficiente stock para realizar la compra.")
