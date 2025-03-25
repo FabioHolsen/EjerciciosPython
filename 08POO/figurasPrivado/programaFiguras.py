@@ -32,8 +32,8 @@ while opcion != 5:
         print(f"El perimetro del triangulo es: {perimetroT}")
         print(f"El area del triangulo es: {areaT}")
     elif opcion == 4:
-        r = int(input("Dime el radio del circulo: "))
-        circ = Circulo(r)
+        radio = int(input("Dime el radio del circulo: "))
+        circ = Circulo(radio)
         perimetroCirc = circ.perimetro()
         areaCirc = circ.area()
         print(f"El perimetro del circulo es: {perimetroCirc}")
