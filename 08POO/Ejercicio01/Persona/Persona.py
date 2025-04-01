@@ -1,5 +1,5 @@
 class Persona:
-    def __init__(self,dni,nombre,apellidos,edad=""):
+    def __init__(self,dni,nombre,apellidos,edad=0):
         self.__dni  = dni
         self.__nombre = nombre
         self.__apellidos = apellidos
@@ -29,17 +29,18 @@ class Persona:
         print(f"DNI: {self.getDni()}, Nombre: {self.getNombre()}, Apellidos: {self.getApellidos()}, Edad: {self.getEdad()}")
     
     def esMayorEdad(self):
-        esMayorBool = None
+        esMayorBool = False
         if self.getEdad() >= 18:
             esMayorBool = True
         return esMayorBool
     
     def esJubilado(self):
-        esJubiladoBool = None 
+        esJubiladoBool = False 
         if self.getEdad() >= 65:
             esJubiladoBool = True
         return esJubiladoBool
     
     def diferenciaEdad(self,persona):
         diferencia = self.getEdad() - persona.getEdad()
+        diferencia = abs(diferencia)
         return diferencia
