@@ -32,8 +32,4 @@ class Coche:
         self.__propietario = value
 
     def muestraCoche(self):
-        print(f"""Matricula: {self.getMatricula}\n
-                Color: {self.getColor}\n
-                Cilindrada: {self.getCilindrada}\n
-                Plazas: {self.getPlazas}\n
-                Propietario: {self.getPropietario}""")
+        print(f"Matricula: {self.getMatricula()}\n Color: {self.getColor()}\n Cilindrada: {self.getCilindrada()}\n Plazas: {self.getPlazas()}\n Propietario: {self.getPropietario()}\n")

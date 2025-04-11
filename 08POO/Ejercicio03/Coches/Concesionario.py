@@ -1,4 +1,20 @@
 from Coche import Coche
+
+def cambiarColor(lista,mat,color):
+    cont= 0
+    encontrado = False
+    while cont < len(lista) and encontrado == False:
+        coche = lista[cont]
+        if coche.getMatricula() == mat:
+            coche.setColor(color)
+            print("Coche pintado correctamente.")
+            encontrado = True
+        else:
+            cont = cont + 1
+def mostrarCoches(lista):
+    for i in lista:
+        i.muestraCoche()
+
 concesionario = []
 
 opciones =["1. Crea el coche","2. Vende el coche","3. Pinta el coche","4. Muestra coche","5. Muestra todos los coches","6. Salir"]
@@ -29,6 +45,24 @@ while opcion != 6:
                 concesionario.pop(cont)
             else:
                 cont=cont+1
+        if not encontrado:
+            print("Error. Coche no encontrado.")
+    elif opcion == 3:
+        matC = input("Dime la matricula del coche: ")
+        col = input("Dime el nuevo color: ")
+        cambiarColor(concesionario,matC,col)
+    elif opcion == 4:
+        cont = 0
+        encontrado = False
+        matM = input("Dime la matricula del coche: ")
+        while cont < len(concesionario) and encontrado == False:
+            coche = concesionario[cont]
+            if coche.getMatricula() == matM:
+                print("Encontrado")
+                print("")
+                coche.muestraCoche()
+                encontrado = True
+            else:
+                cont = cont + 1
     elif opcion == 5:
-        for i in concesionario:
-            print(i.getMatricula())
+        mostrarCoches(concesionario)
