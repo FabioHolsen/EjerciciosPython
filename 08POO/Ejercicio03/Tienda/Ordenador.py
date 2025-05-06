@@ -1,5 +1,5 @@
 class Ordenador:
-    def __init__(self,nSerie,ram,cProcesador,os="Sin precio",precio=0.0):
+    def __init__(self,nSerie,ram,cProcesador,os,precio=0.0):
         self._nSerie = nSerie
         self._ram = ram
         self._cProcesador = cProcesador

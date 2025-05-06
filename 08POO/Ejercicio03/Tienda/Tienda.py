@@ -40,12 +40,21 @@ class Tienda:
     
     def borrarOrdenador(self,nSerie):
         pos = self.getOrdenador(nSerie)
-        existe = False
         if pos != -1:
             self._listaPC.pop(pos)
             print("Ordenador eliminado correctamente.")
         else:
             print("Ordenador no existe.")
+
+    def mostrarOrdenador(self,nSerie):
+        pos = self.getOrdenador(nSerie)
+        if pos != -1:
+            ordenador = self._listaPC[pos]
+        else:
+            print("El ordenador no existe.")
+        return ordenador
+
+
     def  mostrarTienda(self):
         print(f"Tienda con CIF: {self.getCifTienda()}")
         print(f"Nombre: {self.getNombre()}")
