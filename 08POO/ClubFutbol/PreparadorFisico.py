@@ -12,3 +12,7 @@ class PreparadorFisico:
         return self.__exp
     def setExp(self,value):
         self.__exp = value
+
+    def mostrarPreparadorFisico(self):
+        print(f"El nombre del preparador fisico es: {self.getNombre}.")
+        print(f"Sus años de experiencia son: {self.getExp} años.")

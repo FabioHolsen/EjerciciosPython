@@ -12,3 +12,7 @@ class Representante:
         return self.__comision
     def setComision(self,value):
         self.__comision = value
+
+    def mostrarRepresentante(self):
+        print(f"El nombre del representante es: {self.getNombre}")
+        print(f"Su porcentaje de comision es: {self.getComision}")
